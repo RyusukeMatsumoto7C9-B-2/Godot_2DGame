@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3gdou2wefnhe"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_hg3xf"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_g7med"]
 [ext_resource type="Texture2D" uid="uid://bt2xhy4l264nx" path="res://Resources/Textures/Nekko.png" id="1_qex4t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8vq6n"]
@@ -19,7 +19,7 @@ radius = 12.0
 height = 34.0
 
 [node name="Player" type="Area2D"]
-script = ExtResource("1_hg3xf")
+script = ExtResource("1_g7med")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
