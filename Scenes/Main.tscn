@@ -42,6 +42,10 @@ curve = SubResource("Curve2D_aqe43")
 
 [node name="HUD" parent="." instance=ExtResource("4_sknac")]
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
