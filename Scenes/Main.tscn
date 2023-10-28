@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://d3g8gkyfo4pwf"]
+[gd_scene load_steps=2 format=3 uid="uid://d3g8gkyfo4pwf"]
+
+[ext_resource type="PackedScene" uid="uid://c3gdou2wefnhe" path="res://Scenes/player.tscn" id="1_dk6eo"]
 
 [node name="Main" type="Node2D"]
 
@@ -6,3 +8,5 @@
 offset_right = 40.0
 offset_bottom = 23.0
 text = "2D Game"
+
+[node name="Player" parent="." instance=ExtResource("1_dk6eo")]
