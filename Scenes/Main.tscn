@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3g8gkyfo4pwf"]
+[gd_scene load_steps=8 format=3 uid="uid://d3g8gkyfo4pwf"]
 
 [ext_resource type="PackedScene" uid="uid://c3gdou2wefnhe" path="res://Scenes/player.tscn" id="1_dk6eo"]
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_pvowc"]
 [ext_resource type="PackedScene" uid="uid://dh1vuer0nb6yq" path="res://Scenes/mob.tscn" id="2_m83fx"]
 [ext_resource type="PackedScene" uid="uid://bau410gdn1gkp" path="res://Scenes/hud.tscn" id="4_sknac"]
+[ext_resource type="AudioStream" uid="uid://dy7ciwrmwo81c" path="res://Resources/Sounds/BGM/famipop3.mp3" id="5_6d6hb"]
+[ext_resource type="AudioStream" uid="uid://dmh8u6etisy8x" path="res://Resources/Sounds/SE/oh-well-45435.mp3" id="6_mkbit"]
 
 [sub_resource type="Curve2D" id="Curve2D_aqe43"]
 _data = {
@@ -43,8 +45,12 @@ curve = SubResource("Curve2D_aqe43")
 [node name="HUD" parent="." instance=ExtResource("4_sknac")]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_6d6hb")
+volume_db = -40.0
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_mkbit")
+volume_db = -20.526
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
